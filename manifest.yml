@@ -1,0 +1,25 @@
+{
+    "display_information": {
+        "name": "My Slack App",
+        "description": "Slack app that does cool things!",
+        "background_color": "#d45443"
+    },
+    "features": {
+        "bot_user": {
+            "display_name": "Amber's App",
+            "always_online": false
+        }
+    },
+    "oauth_config": {
+        "scopes": {
+            "bot": [
+                "chat:write",
+            ]
+        }
+    },
+    "settings": {
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": false,
+        "token_rotation_enabled": false
+    }
+}
