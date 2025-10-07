@@ -1,6 +1,6 @@
-# Slack Template
+# Slack++
 
-This is a Slack template for creating a great Slack app using Python and Starlette.
+Slack. Enhanced.
 
 ## Prerequisites
 
@@ -23,8 +23,8 @@ This is a Slack template for creating a great Slack app using Python and Starlet
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-repo/slack-template.git
-   cd professor-bloom
+   git clone https://github.com/your-repo/slack-plus-plus.git
+   cd slack-plus-plus
    ```
 
 2. Install dependencies:
@@ -73,7 +73,7 @@ This is a Slack template for creating a great Slack app using Python and Starlet
 
 3. Start the application:
    ```
-   app
+   slackpp
    ```
 
 Your Slack app should now be running and connected to your Slack workspace!

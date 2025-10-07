@@ -4,9 +4,9 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.routing import Route
 
-from app.__main__ import main
-from app.utils.env import env
-from app.utils.slack import app as slack_app
+from slackpp.config import config
+from slackpp.env import env
+from slackpp.utils.slack import app as slack_app
 
 req_handler = AsyncSlackRequestHandler(slack_app)
 
@@ -31,10 +31,10 @@ async def health(req: Request):
 
 
 app = Starlette(
-    debug=True if env.environment != "production" else False,
+    debug=True if config.environment != "production" else False,
     routes=[
         Route(path="/slack/events", endpoint=endpoint, methods=["POST"]),
         Route(path="/health", endpoint=health, methods=["GET"]),
     ],
-    lifespan=main,
+    lifespan=env.enter,
 )
